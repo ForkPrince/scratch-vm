@@ -21,7 +21,6 @@ RUN git clone https://github.com/Twint-Studio/scratch-vm.git
 
 RUN cd ./scratch-vm && npm install
 RUN chown -R node:node ~/.npm
-RUN chmod -h 777 npm
 RUN cd ./scratch-vm && npm link
 
 RUN cd ./scratch-gui && npm install
