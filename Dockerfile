@@ -19,13 +19,11 @@ USER node
 RUN git clone https://github.com/Twint-Studio/scratch-gui.git
 RUN git clone https://github.com/Twint-Studio/scratch-vm.git
 
-RUN cd ./scratch-vm
-RUN npm install
-RUN npm link
+RUN cd ./scratch-vm && npm install
+RUN cd ./scratch-vm && npm link
 
-RUN cd ../scratch-gui
-RUN npm install
-RUN npm link scratch-vm scratch-blocks
+RUN cd ./scratch-gui && npm install
+RUN cd ./scratch-gui && npm link scratch-vm scratch-blocks
 
 COPY --chown=node:node . .
 
