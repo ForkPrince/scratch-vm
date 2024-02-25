@@ -113,7 +113,7 @@ class Scratch3HiddenBlocks {
         log.log(text);
     }
 
-    brainfuck () {
+    brainfuck (args) {
         const code = Cast.toString(args.CODE);
 
         const compiler = new BrainfuckCompiler(code);
