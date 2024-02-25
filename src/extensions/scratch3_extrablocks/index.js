@@ -10,8 +10,8 @@ class Scratch3HiddenBlocks {
 
     getInfo () {
         return {
-            id: 'newblocks',
-            name: 'New Blocks',
+            id: 'extrablocks',
+            name: 'Extra Blocks',
             blocks: [
                 {
                     opcode: 'writeLog',
