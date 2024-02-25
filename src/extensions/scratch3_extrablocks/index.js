@@ -93,7 +93,7 @@ class Scratch3HiddenBlocks {
                 },
                 {
                     opcode: 'brainfuck',
-                    blockType: BlockType.COMMAND,
+                    blockType: BlockType.REPORTER,
                     text: 'brainfuck [CODE]',
                     arguments: {
                         CODE: {
