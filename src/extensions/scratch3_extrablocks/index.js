@@ -92,6 +92,17 @@ class Scratch3HiddenBlocks {
                     }
                 },
                 {
+                    opcode: 'evalCode',
+                    blockType: BlockType.REPORTER,
+                    text: 'eval [CODE]',
+                    arguments: {
+                        CODE: {
+                            type: ArgumentType.STRING,
+                            defaultValue: "50+5"
+                        }
+                    }
+                },
+                {
                     opcode: 'brainfuck',
                     blockType: BlockType.REPORTER,
                     text: 'brainfuck [CODE]',
@@ -118,6 +129,14 @@ class Scratch3HiddenBlocks {
 
         const compiler = new BrainfuckCompiler(code);
         const output = compiler.compile();
+
+        return output;
+    }
+
+    evalCode (args) {
+        const code = Cast.toString(args.CODE);
+
+        const output = eval(code);
 
         return output;
     }
